@@ -57,7 +57,7 @@ h2 {
   transform: translateY(-5px);
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
   background-color: #0056B3;
-  }
+}
 
 .Card img {
   width: 100%;
@@ -96,4 +96,62 @@ h2 {
 
 .Card a:hover {
   background-color: #0056b3;
+}
+
+/* Media queries for responsiveness */
+
+@media (max-width: 1200px) {
+  .Grid {
+    grid-template-columns: repeat(3, 1fr); /* Adjust to 3 cards per row */
+  }
+}
+
+@media (max-width: 768px) {
+  .Grid {
+    grid-template-columns: repeat(2, 1fr); /* Adjust to 2 cards per row */
+    gap: 20px;
+  }
+
+  .Card {
+    padding: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .Grid {
+    grid-template-columns: 1fr; /* Single column layout */
+    gap: 15px;
+  }
+
+  .Card {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  h2 {
+    font-size: 1rem;
+  }
+
+  .Card img {
+    height: 150px; /* Adjust image height for smaller screens */
+  }
+
+  .Card h5 {
+    font-size: 1rem;
+  }
+
+  .Card p {
+    font-size: 0.8rem;
+  }
 }
